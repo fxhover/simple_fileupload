@@ -12,8 +12,8 @@ class SimpleFileupload
         self.send("#{key}=", value)
       end
     end
-    FileUtils.mkdir(@upload_path, mode: 0766) unless File.directory? @upload_path
-    FileUtils.chmod(0766, @upload_path) unless File.writable_real?(@upload_path)
+    FileUtils.mkdir(@upload_path, mode: 0777) unless File.directory? @upload_path
+    FileUtils.chmod(0777, @upload_path) unless File.writable_real?(@upload_path)
     ((0..9).to_a + ('a'..'z').to_a).each &method(:check_and_mkdir) if random_dir?
   end
 
@@ -89,8 +89,8 @@ class SimpleFileupload
 
   def check_and_mkdir(dir)
     dir_name = File.join(@upload_path, dir.to_s)
-    FileUtils.mkdir(dir_name, mode: 0766) unless File.directory? dir_name
-    FileUtils.chmod(0766, dir_name)
+    FileUtils.mkdir(dir_name, mode: 0777) unless File.directory? dir_name
+    FileUtils.chmod(0777, dir_name)
   end
 
   def random_dir

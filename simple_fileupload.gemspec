@@ -1,10 +1,10 @@
 #encoding: utf-8
 Gem::Specification.new do |s|
   s.name        = 'simple_fileupload'
-  s.version     = '0.0.1'
+  s.version     = '0.0.2'
   s.licenses    = ['MIT']
   s.required_rubygems_version = '>= 1.3.6'
-  s.date        = '2014-08-19'
+  s.date        = '2014-09-01'
   s.summary     = "strdes!"
   s.description = "A simple rails fileupload gem"
   s.authors     = ["fxhover"]
